@@ -5,7 +5,7 @@ import MyName from './MyName.js';
 class App extends Component{
   render(){
     return(
-      <MyName />
+      <MyName name="Functional Component React" />
     ); 
   }
 }
