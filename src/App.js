@@ -1,34 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types'
+import React, {Component, Fragment} from 'react';
+import './App.css';
+import MyName from './MyName.js';
 
-class App extends React.Component{
-  constructor(){
-    super();
-    this.state ={
-      txt: 'this is the state txt',
-      cat: 0
-    }
-  }
-  update(e){
-    this.setState({txt: e.target.value})
-  }
+class App extends Component{
   render(){
-    return (
-    <div>
-      <input type="text" onChange={this.update.bind(this)} />
-     <h1>{this.state.txt} - {this.state.cat}</h1>
-    </div>
-    )  
+    return(
+      <MyName name="React" />
+    ); 
   }
-}
-
-App.propTypes ={
-  txt: PropTypes.string,
-  cat: PropTypes.number.isRequired
-}
-
-App.defaultProps = {
-  txt: "this is the default txt"
 }
 
 export default App
