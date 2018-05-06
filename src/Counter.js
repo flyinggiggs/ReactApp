@@ -6,15 +6,18 @@ class Counter extends Component {
     }
 
     handleIncrease = () => {
+        const {number} = this.state;
         this.setState({
-            number: this.state.number + 1
+            number: number + 1
         });
     }
 
     handleDcrease = () => {
-        this.setState({
-            number: this.state.number - 1
-        });
+        this.setState(
+           ({number}) => ({
+               number: number -1
+           })
+        );
     }
 
     render() {
@@ -28,3 +31,5 @@ class Counter extends Component {
         );
     }
 }
+
+export default Counter;
