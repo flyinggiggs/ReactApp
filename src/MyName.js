@@ -1,6 +1,9 @@
 import React, {Component, Fragment} from 'react';
 
 class MyName extends Component{
+  static defaultProps = {
+    name: "Default Name"
+  }
   render(){
     return(
         <div>
